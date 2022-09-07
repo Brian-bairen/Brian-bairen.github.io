@@ -1,138 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>创建个人Blog</title>
-    <url>/docs/create-blog/</url>
-    <content><![CDATA[<h2 id="静态博客-——-Hexo"><a href="#静态博客-——-Hexo" class="headerlink" title="静态博客 —— Hexo"></a>静态博客 —— Hexo</h2><blockquote>
-<p>静态博客：是指没有后端数据库的博客，所有文章都是以文件的形式存储，是一种纯前端的博客框架。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h2><h3 id="1-安装Node-js和git"><a href="#1-安装Node-js和git" class="headerlink" title="1. 安装Node.js和git"></a>1. 安装Node.js和git</h3><blockquote>
-<p>因为Hexo是通过Node.js生成的，所以首先需要根据自己的操作系统版本下载并安装Node.js。</p>
-<p>很多命令既可以用Windows的cmd来完成，也可以使用git bash来完成，但是部分命令会有一些问题，为避免不必要的问题，建议全部使用git bash来执行</p>
-<p>根据步骤提示进行操作后，在item (Windows是cmd或者是右键➡️git bash)中输入命令：</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#如果能正确显示Node.js和git版本，则说明安装成功</span><br><span class="line">node -v</span><br><span class="line">git --version </span><br></pre></td></tr></table></figure>
-
-<h3 id="2-通过npm安装Hexo框架"><a href="#2-通过npm安装Hexo框架" class="headerlink" title="2. 通过npm安装Hexo框架"></a>2. 通过npm安装Hexo框架</h3><blockquote>
-<p>Node.js安装成功后，同时会自动安装一个包管理器，称为npm (Node Package Manager)。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli #安装</span><br><span class="line">hexo -v #查看hexo版本</span><br></pre></td></tr></table></figure>
-
-<h2 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a>本地使用</h2><h3 id="1-创建目录"><a href="#1-创建目录" class="headerlink" title="1. 创建目录"></a>1. 创建目录</h3><blockquote>
-<p>Hexo的所有文章都是以文件的形式存储在目录下的，所以首先需要新建一个目录，在此目录下操作。</p>
-</blockquote>
-<h3 id="2-初始化博客"><a href="#2-初始化博客" class="headerlink" title="2. 初始化博客"></a>2. 初始化博客</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-新建文章"><a href="#3-新建文章" class="headerlink" title="3. 新建文章"></a>3. 新建文章</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new &quot;BlogName&quot;  #BlogName是你的文章名称</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>会在 <font color=#0070ff> source&#x2F;_posts </font> 目录下生成BlogName.md文件，可以vim或其他Markdown编辑器进行修改。(推荐使用vscode)</p>
-</blockquote>
-<h3 id="4-生成博客静态文件"><a href="#4-生成博客静态文件" class="headerlink" title="4. 生成博客静态文件"></a>4. 生成博客静态文件</h3><blockquote>
-<p>每次修改文章后，都需要通过<font color=#0070ff> hexo clean </font>清理一下，</p>
-<p>然后通过<font color=#0070ff> hexo g </font>重新生成，</p>
-<p>最后也不要忘了通过<font color=#0070ff> hexo s </font>重新启动Hexo。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean #清理</span><br><span class="line">hexo g #g代表generate，生成博客静态文件</span><br><span class="line">hexo s #测试Blog显示是不是正常，通常访问地址是http://localhost:4000/，如果4000端口不可用，需要换一个。</span><br></pre></td></tr></table></figure>
-
-<h3 id="5-启动博客"><a href="#5-启动博客" class="headerlink" title="5. 启动博客"></a>5. 启动博客</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s  #s代表server，默认端口号是4000</span><br></pre></td></tr></table></figure>
-
-<h3 id="6-更换主题"><a href="#6-更换主题" class="headerlink" title="6. 更换主题"></a>6. 更换主题</h3><blockquote>
-<p>将需要更换的主题下载并解压缩到theme&#x2F;themeName目录下，themeName是你给主题取的名字，</p>
-<p>如我用的主题是<font color=#0070ff> next </font>，只需要解压缩到<font color=#0070ff> Hexo&#x2F;themes&#x2F;next </font>目录下即可,</p>
-<p>当然你也可以直接在<font color=#0070ff> hexo </font>目录下执行<font color=#0070ff> git clone <a href="https://github.com/next-theme/hexo-theme-next">https://github.com/next-theme/hexo-theme-next</a> themes&#x2F;next </font>，</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>解压完成后，修改_config.yaml文件中的<font color=#0070ff> theme </font>属性，默认是<font color=#0070ff> landscape </font>，修改为<font color=#0070ff> next </font>：</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: next #注意：“theme:”后要带一个空格</span><br></pre></td></tr></table></figure>
-
-<h3 id="7-其他-config-yaml配置"><a href="#7-其他-config-yaml配置" class="headerlink" title="7. 其他_config.yaml配置"></a>7. 其他_config.yaml配置</h3><blockquote>
-<p>_config.yaml文件是Hexo项目的全局配置文件，常用的属性有：</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Site</span><br><span class="line"># 站点标题</span><br><span class="line">title: username&#x27;s Blog</span><br><span class="line"># 站点副标题</span><br><span class="line">subtitle: Fighting for BAT!</span><br><span class="line"># 站点描述</span><br><span class="line">description: 记住迄今为止每一次失败时有心无力的感受，“为了更美好的明天而战”。</span><br><span class="line"># 作者</span><br><span class="line">author: username</span><br><span class="line"># 语言——  请注意，官方语言包不再支持简体中文zh-Hans，而是统一采用了zh-CN</span><br><span class="line">language: zh-CN</span><br><span class="line"># 时区——默认是本地时区</span><br><span class="line">timezone:</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line"># 站点地址</span><br><span class="line">url: http://example.com</span><br><span class="line"># 站点root，如果网站存在子目录中，url设置为&#x27;http://yoursite.com/child&#x27;，root设置为&#x27;/child/&#x27;</span><br><span class="line">root: /</span><br><span class="line"># 生成固定链接的格式</span><br><span class="line">permalink: :title/</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"># Pagination</span><br><span class="line"># 每页文章数——关闭分页：0</span><br><span class="line">per_page: 10</span><br><span class="line"></span><br><span class="line"># Extensions</span><br><span class="line"># 主题</span><br><span class="line">theme: next</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line"># 部署配置</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/username/username.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>每次修改文章后，都需要通过<font color=#0070ff> hexo clean </font>清理一下，</p>
-<p>然后通过<font color=#0070ff> hexo g </font>重新生成，</p>
-<p>最后也不要忘了通过<font color=#0070ff> hexo s </font>重新启动Hexo。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean #清理</span><br><span class="line">hexo g #g代表generate，生成博客静态文件</span><br><span class="line">hexo s #测试Blog显示是不是正常，通常访问地址是http://localhost:4000/，如果4000端口不可用，检查端口是否被占用。</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置SSH免密登录"><a href="#配置SSH免密登录" class="headerlink" title="配置SSH免密登录"></a>配置SSH免密登录</h2><p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。</p>
-<h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><blockquote>
-<ul>
-<li><p>第一步：首先打开电脑文件夹，找到<font color=#0070ff> C:\Users\username.ssh </font>文件夹并删除</p>
-</li>
-<li><p>第二步：在<font color=#0070ff> C:\Users\username </font>文件夹下右键打开Git Bash Here输入命令：ssh-keygen -t rsa -C github邮件地址   生成.ssh秘钥，输入后连敲三次回车，出现下图情况代表成功</p>
-</li>
-</ul>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C github邮件地址 #github邮件地址是注册Github用的邮箱地址</span><br></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li><p>第三步：最终生成了一个新的 <font color=#0070ff> C:\Users\username.ssh </font>文件夹，打开这个文件夹，找到<font color=#0070ff> .ssh\id_rsa.pub </font>文件，记事本打开并复制里面的内容</p>
-</li>
-<li><p>第四步：打开你的github主页，进入个人设置 ➡️ <a href="https://github.com/settings/keys">SSH and GPG keys</a> ➡️ New SSH key，把复制的内容粘贴进去，title随便填，保存即可，我们的公钥就添加成功了，设置好如下图：</p>
-</li>
-</ul>
-<p><img src="/docs/create-blog/ssh.png" alt="SSH and GPG keys" title="SSH and GPG keys"></p>
-<ul>
-<li><p>第五步：检测是否设置成功：</p>
-<p>输入命令： <font color=#0070ff> $ ssh -T <a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#109;">&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#109;</a> </font>  # 注意邮箱地址不用改</p>
-</li>
-</ul>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>  如果提示<font color=#0070ff> Are you sure you want to continue connecting (yes&#x2F;no)? </font>，输入<font color=#0070ff> yes </font>，然后会看到：</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hi liuxianan! You&#x27;ve successfully authenticated, but GitHub does not provide shell access. </span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>  看到这个信息说明SSH已配置成功！</p>
-<ul>
-<li>第六步：此时你还需要配置：</li>
-</ul>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;liuxianan&quot; // 你的github用户名，非昵称</span><br><span class="line">$ git config --global user.email &quot;xxx@gmail.com&quot; // 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
-
-<h2 id="Github服务器部署"><a href="#Github服务器部署" class="headerlink" title="Github服务器部署"></a>Github服务器部署</h2><h3 id="1-本地-github-io-白嫖部署"><a href="#1-本地-github-io-白嫖部署" class="headerlink" title="1. 本地 + github.io 白嫖部署"></a>1. 本地 + github.io 白嫖部署</h3><blockquote>
-<p>首先注册并登录<a href="https://github.com/new">GitHub</a>，创建新public仓库，仓库名称一定要是：<br>username.github.io（username是<a href="https://github.com/settings/admin">你的GitHub用户名</a>，大小写敏感！）</p>
-</blockquote>
-<h3 id="2-本地安装Hexo的git部署插件"><a href="#2-本地安装Hexo的git部署插件" class="headerlink" title="2. 本地安装Hexo的git部署插件"></a>2. 本地安装Hexo的git部署插件</h3><blockquote>
-<p>在Hexo的目录下，输入<font color=#0070ff> npm install –save hexo-deployer-git </font>，会报一个peerDependencies WARNING，可以忽略。</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-本地修改-config-yaml文件"><a href="#3-本地修改-config-yaml文件" class="headerlink" title="3. 本地修改_config.yaml文件"></a>3. 本地修改_config.yaml文件</h3><blockquote>
-<p>在Hexo目录下，找到_config.yaml文件，在#Deployment做如下修改：</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/username/username.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-部署"><a href="#4-部署" class="headerlink" title="4. 部署"></a>4. 部署</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>部署成功后，浏览器输入username.github.io（username是<a href="https://github.com/settings/admin">你的GitHub用户名</a>，大小写敏感！）</p>
-</blockquote>
-<h3 id="5-写文章-amp-发布"><a href="#5-写文章-amp-发布" class="headerlink" title="5. 写文章 &amp; 发布"></a>5. 写文章 &amp; 发布</h3><h2 id="Cloudflare部署"><a href="#Cloudflare部署" class="headerlink" title="Cloudflare部署"></a>Cloudflare部署</h2><blockquote>
-<p><a href="https://ifibe.com/posts/f86630d0/#%E4%BD%BF%E7%94%A8-Hexo-%E7%94%9F%E6%88%90%E4%B8%80%E6%AC%A1%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6">Cloudflare部署</a></p>
-<p>部署完成后，记得在<a href="https://vircloud.net/exp/cf-worker-domain.html">Cloudflare里面绑定下路由</a></p>
-</blockquote>
-<h2 id="Next主题配置"><a href="#Next主题配置" class="headerlink" title="Next主题配置"></a>Next主题配置</h2><blockquote>
-<p><a href="https://theme-next.js.org/docs/theme-settings/">主题配置</a></p>
-</blockquote>
-<hr>
-<p>所有资源来自网络<br>感谢 <a href="https://dragonbaby308.github.io/hexo/">DragonBaby308</a> &amp; <a href="https://www.bilibili.com/read/cv12633102">码游菌</a><br>Collected by Brian</p>
-]]></content>
-      <tags>
-        <tag>Blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>阅读WEB版</title>
     <url>/docs/READER/</url>
     <content><![CDATA[<h1 id="Reader"><a href="#Reader" class="headerlink" title="Reader:"></a>Reader:</h1><p>阅读3服务器版，不需要手机。</p>
@@ -177,6 +45,138 @@
 ]]></content>
       <tags>
         <tag>Hello World</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>创建个人Blog</title>
+    <url>/docs/create-blog/</url>
+    <content><![CDATA[<h2 id="静态博客-——-Hexo"><a href="#静态博客-——-Hexo" class="headerlink" title="静态博客 —— Hexo"></a>静态博客 —— Hexo</h2><blockquote>
+<p>静态博客：是指没有后端数据库的博客，所有文章都是以文件的形式存储，是一种纯前端的博客框架。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h2><h3 id="安装Node-js和git"><a href="#安装Node-js和git" class="headerlink" title="安装Node.js和git"></a>安装Node.js和git</h3><blockquote>
+<p>因为Hexo是通过Node.js生成的，所以首先需要根据自己的操作系统版本下载并安装Node.js。</p>
+<p>很多命令既可以用Windows的cmd来完成，也可以使用git bash来完成，但是部分命令会有一些问题，为避免不必要的问题，建议全部使用git bash来执行</p>
+<p>根据步骤提示进行操作后，在item (Windows是cmd或者是右键➡️git bash)中输入命令：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#如果能正确显示Node.js和git版本，则说明安装成功</span><br><span class="line">node -v</span><br><span class="line">git --version </span><br></pre></td></tr></table></figure>
+
+<h3 id="通过npm安装Hexo框架"><a href="#通过npm安装Hexo框架" class="headerlink" title="通过npm安装Hexo框架"></a>通过npm安装Hexo框架</h3><blockquote>
+<p>Node.js安装成功后，同时会自动安装一个包管理器，称为npm (Node Package Manager)。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli #安装</span><br><span class="line">hexo -v #查看hexo版本</span><br></pre></td></tr></table></figure>
+
+<h2 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a>本地使用</h2><h3 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h3><blockquote>
+<p>Hexo的所有文章都是以文件的形式存储在目录下的，所以首先需要新建一个目录，在此目录下操作。</p>
+</blockquote>
+<h3 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new &quot;BlogName&quot;  #BlogName是你的文章名称</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>会在 <font color=#0070ff> source&#x2F;_posts </font> 目录下生成BlogName.md文件，可以vim或其他Markdown编辑器进行修改。(推荐使用vscode)</p>
+</blockquote>
+<h3 id="生成博客静态文件"><a href="#生成博客静态文件" class="headerlink" title="生成博客静态文件"></a>生成博客静态文件</h3><blockquote>
+<p>每次修改文章后，都需要通过<font color=#0070ff> hexo clean </font>清理一下，</p>
+<p>然后通过<font color=#0070ff> hexo g </font>重新生成，</p>
+<p>最后也不要忘了通过<font color=#0070ff> hexo s </font>重新启动Hexo。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean #清理</span><br><span class="line">hexo g #g代表generate，生成博客静态文件</span><br><span class="line">hexo s #测试Blog显示是不是正常，通常访问地址是http://localhost:4000/，如果4000端口不可用，需要换一个。</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动博客"><a href="#启动博客" class="headerlink" title="启动博客"></a>启动博客</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s  #s代表server，默认端口号是4000</span><br></pre></td></tr></table></figure>
+
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><blockquote>
+<p>将需要更换的主题下载并解压缩到theme&#x2F;themeName目录下，themeName是你给主题取的名字，</p>
+<p>如我用的主题是<font color=#0070ff> next </font>，只需要解压缩到<font color=#0070ff> Hexo&#x2F;themes&#x2F;next </font>目录下即可,</p>
+<p>当然你也可以直接在<font color=#0070ff> hexo </font>目录下执行<font color=#0070ff> git clone <a href="https://github.com/next-theme/hexo-theme-next">https://github.com/next-theme/hexo-theme-next</a> themes&#x2F;next </font>，</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>解压完成后，修改_config.yaml文件中的<font color=#0070ff> theme </font>属性，默认是<font color=#0070ff> landscape </font>，修改为<font color=#0070ff> next </font>：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: next #注意：“theme:”后要带一个空格</span><br></pre></td></tr></table></figure>
+
+<h3 id="其他-config-yaml配置"><a href="#其他-config-yaml配置" class="headerlink" title="其他_config.yaml配置"></a>其他_config.yaml配置</h3><blockquote>
+<p>_config.yaml文件是Hexo项目的全局配置文件，常用的属性有：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Site</span><br><span class="line"># 站点标题</span><br><span class="line">title: username&#x27;s Blog</span><br><span class="line"># 站点副标题</span><br><span class="line">subtitle: Fighting for BAT!</span><br><span class="line"># 站点描述</span><br><span class="line">description: 记住迄今为止每一次失败时有心无力的感受，“为了更美好的明天而战”。</span><br><span class="line"># 作者</span><br><span class="line">author: username</span><br><span class="line"># 语言——  请注意，官方语言包不再支持简体中文zh-Hans，而是统一采用了zh-CN</span><br><span class="line">language: zh-CN</span><br><span class="line"># 时区——默认是本地时区</span><br><span class="line">timezone:</span><br><span class="line"></span><br><span class="line"># URL</span><br><span class="line"># 站点地址</span><br><span class="line">url: http://example.com</span><br><span class="line"># 站点root，如果网站存在子目录中，url设置为&#x27;http://yoursite.com/child&#x27;，root设置为&#x27;/child/&#x27;</span><br><span class="line">root: /</span><br><span class="line"># 生成固定链接的格式</span><br><span class="line">permalink: :title/</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"># Pagination</span><br><span class="line"># 每页文章数——关闭分页：0</span><br><span class="line">per_page: 10</span><br><span class="line"></span><br><span class="line"># Extensions</span><br><span class="line"># 主题</span><br><span class="line">theme: next</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line"># 部署配置</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/username/username.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>每次修改文章后，都需要通过<font color=#0070ff> hexo clean </font>清理一下，</p>
+<p>然后通过<font color=#0070ff> hexo g </font>重新生成，</p>
+<p>最后也不要忘了通过<font color=#0070ff> hexo s </font>重新启动Hexo。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean #清理</span><br><span class="line">hexo g #g代表generate，生成博客静态文件</span><br><span class="line">hexo s #测试Blog显示是不是正常，通常访问地址是http://localhost:4000/，如果4000端口不可用，检查端口是否被占用。</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置SSH免密登录"><a href="#配置SSH免密登录" class="headerlink" title="配置SSH免密登录"></a>配置SSH免密登录</h2><p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。</p>
+<h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><blockquote>
+<ul>
+<li><p>第一步：首先打开电脑文件夹，找到<font color=#0070ff> C:\Users\username.ssh </font>文件夹并删除</p>
+</li>
+<li><p>第二步：在<font color=#0070ff> C:\Users\username </font>文件夹下右键打开Git Bash Here输入命令：ssh-keygen -t rsa -C github邮件地址   生成.ssh秘钥，输入后连敲三次回车，出现下图情况代表成功</p>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C github邮件地址 #github邮件地址是注册Github用的邮箱地址</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li><p>第三步：最终生成了一个新的 <font color=#0070ff> C:\Users\username.ssh </font>文件夹，打开这个文件夹，找到<font color=#0070ff> .ssh\id_rsa.pub </font>文件，记事本打开并复制里面的内容</p>
+</li>
+<li><p>第四步：打开你的github主页，进入个人设置 ➡️ <a href="https://github.com/settings/keys">SSH and GPG keys</a> ➡️ New SSH key，把复制的内容粘贴进去，title随便填，保存即可，我们的公钥就添加成功了，设置好如下图：</p>
+</li>
+</ul>
+<p><img src="/docs/create-blog/ssh.png" alt="SSH and GPG keys" title="SSH and GPG keys"></p>
+<ul>
+<li><p>第五步：检测是否设置成功：</p>
+<p>输入命令： <font color=#0070ff> $ ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a> </font>  # 注意邮箱地址不用改</p>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>  如果提示<font color=#0070ff> Are you sure you want to continue connecting (yes&#x2F;no)? </font>，输入<font color=#0070ff> yes </font>，然后会看到：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hi liuxianan! You&#x27;ve successfully authenticated, but GitHub does not provide shell access. </span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>  看到这个信息说明SSH已配置成功！</p>
+<ul>
+<li>第六步：此时你还需要配置：</li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;liuxianan&quot; // 你的github用户名，非昵称</span><br><span class="line">$ git config --global user.email &quot;xxx@gmail.com&quot; // 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
+
+<h2 id="Github服务器部署"><a href="#Github服务器部署" class="headerlink" title="Github服务器部署"></a>Github服务器部署</h2><h3 id="本地-github-io-白嫖部署"><a href="#本地-github-io-白嫖部署" class="headerlink" title="本地 + github.io 白嫖部署"></a>本地 + github.io 白嫖部署</h3><blockquote>
+<p>首先注册并登录<a href="https://github.com/new">GitHub</a>，创建新public仓库，仓库名称一定要是：<br>username.github.io（username是<a href="https://github.com/settings/admin">你的GitHub用户名</a>，大小写敏感！）</p>
+</blockquote>
+<h3 id="本地安装Hexo的git部署插件"><a href="#本地安装Hexo的git部署插件" class="headerlink" title="本地安装Hexo的git部署插件"></a>本地安装Hexo的git部署插件</h3><blockquote>
+<p>在Hexo的目录下，输入<font color=#0070ff> npm install –save hexo-deployer-git </font>，会报一个peerDependencies WARNING，可以忽略。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<h3 id="本地修改-config-yaml文件"><a href="#本地修改-config-yaml文件" class="headerlink" title="本地修改_config.yaml文件"></a>本地修改_config.yaml文件</h3><blockquote>
+<p>在Hexo目录下，找到_config.yaml文件，在#Deployment做如下修改：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/username/username.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>部署成功后，浏览器输入username.github.io（username是<a href="https://github.com/settings/admin">你的GitHub用户名</a>，大小写敏感！）</p>
+</blockquote>
+<h3 id="写文章-amp-发布"><a href="#写文章-amp-发布" class="headerlink" title="写文章 &amp; 发布"></a>写文章 &amp; 发布</h3><h2 id="Cloudflare部署"><a href="#Cloudflare部署" class="headerlink" title="Cloudflare部署"></a>Cloudflare部署</h2><blockquote>
+<p><a href="https://ifibe.com/posts/f86630d0/#%E4%BD%BF%E7%94%A8-Hexo-%E7%94%9F%E6%88%90%E4%B8%80%E6%AC%A1%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6">Cloudflare部署</a></p>
+<p>部署完成后，记得在<a href="https://vircloud.net/exp/cf-worker-domain.html">Cloudflare里面绑定下路由</a></p>
+</blockquote>
+<h2 id="Next主题配置"><a href="#Next主题配置" class="headerlink" title="Next主题配置"></a>Next主题配置</h2><blockquote>
+<p><a href="https://theme-next.js.org/docs/theme-settings/">主题配置</a></p>
+</blockquote>
+<hr>
+<p>所有资源来自网络<br>感谢 <a href="https://dragonbaby308.github.io/hexo/">DragonBaby308</a> &amp; <a href="https://www.bilibili.com/read/cv12633102">码游菌</a><br>Collected by Brian</p>
+]]></content>
+      <tags>
+        <tag>Blog</tag>
       </tags>
   </entry>
 </search>
