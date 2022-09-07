@@ -50,12 +50,14 @@
   <entry>
     <title>创建个人Blog</title>
     <url>/docs/create-blog/</url>
-    <content><![CDATA[<h2 id="静态博客-——-Hexo"><a href="#静态博客-——-Hexo" class="headerlink" title="静态博客 —— Hexo"></a>静态博客 —— Hexo</h2><blockquote>
+    <content><![CDATA[<h2 id="静态博客-——-Hexo"><a href="#静态博客-——-Hexo" class="headerlink" title="静态博客 —— Hexo"></a>静态博客 —— Hexo</h2><hr>
+<blockquote>
 <p>静态博客：是指没有后端数据库的博客，所有文章都是以文件的形式存储，是一种纯前端的博客框架。</p>
 </blockquote>
 <span id="more"></span>
 
-<h2 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h2><h3 id="安装Node-js和git"><a href="#安装Node-js和git" class="headerlink" title="安装Node.js和git"></a>安装Node.js和git</h3><blockquote>
+<h2 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h2><hr>
+<h3 id="安装Node-js和git"><a href="#安装Node-js和git" class="headerlink" title="安装Node.js和git"></a>安装Node.js和git</h3><blockquote>
 <p>因为Hexo是通过Node.js生成的，所以首先需要根据自己的操作系统版本下载并安装Node.js。</p>
 <p>很多命令既可以用Windows的cmd来完成，也可以使用git bash来完成，但是部分命令会有一些问题，为避免不必要的问题，建议全部使用git bash来执行</p>
 <p>根据步骤提示进行操作后，在item (Windows是cmd或者是右键➡️git bash)中输入命令：</p>
@@ -67,7 +69,8 @@
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli #安装</span><br><span class="line">hexo -v #查看hexo版本</span><br></pre></td></tr></table></figure>
 
-<h2 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a>本地使用</h2><h3 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h3><blockquote>
+<h2 id="本地使用"><a href="#本地使用" class="headerlink" title="本地使用"></a>本地使用</h2><hr>
+<h3 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h3><blockquote>
 <p>Hexo的所有文章都是以文件的形式存储在目录下的，所以首先需要新建一个目录，在此目录下操作。</p>
 </blockquote>
 <h3 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
@@ -110,7 +113,8 @@
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo clean #清理</span><br><span class="line">hexo g #g代表generate，生成博客静态文件</span><br><span class="line">hexo s #测试Blog显示是不是正常，通常访问地址是http://localhost:4000/，如果4000端口不可用，检查端口是否被占用。</span><br></pre></td></tr></table></figure>
 
-<h2 id="配置SSH免密登录"><a href="#配置SSH免密登录" class="headerlink" title="配置SSH免密登录"></a>配置SSH免密登录</h2><p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。</p>
+<h2 id="配置SSH免密登录"><a href="#配置SSH免密登录" class="headerlink" title="配置SSH免密登录"></a>配置SSH免密登录</h2><hr>
+<p>为什么要配置这个呢？因为你提交代码肯定要拥有你的github权限才可以，但是直接使用用户名和密码太不安全了，所以我们使用ssh key来解决本地和服务器的连接问题。</p>
 <h3 id="操作步骤："><a href="#操作步骤：" class="headerlink" title="操作步骤："></a>操作步骤：</h3><blockquote>
 <ul>
 <li><p>第一步：首先打开电脑文件夹，找到<font color=#0070ff> C:\Users\username.ssh </font>文件夹并删除</p>
@@ -130,7 +134,7 @@
 <p><img src="/docs/create-blog/ssh.png" alt="SSH and GPG keys" title="SSH and GPG keys"></p>
 <ul>
 <li><p>第五步：检测是否设置成功：</p>
-<p>输入命令： <font color=#0070ff> $ ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a> </font>  # 注意邮箱地址不用改</p>
+<p>输入命令： <font color=#0070ff> $ ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#x6d;</a> </font>  # 注意邮箱地址不用改</p>
 </li>
 </ul>
 </blockquote>
@@ -147,7 +151,8 @@
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;liuxianan&quot; // 你的github用户名，非昵称</span><br><span class="line">$ git config --global user.email &quot;xxx@gmail.com&quot; // 填写你的github注册邮箱</span><br></pre></td></tr></table></figure>
 
-<h2 id="Github服务器部署"><a href="#Github服务器部署" class="headerlink" title="Github服务器部署"></a>Github服务器部署</h2><h3 id="本地-github-io-白嫖部署"><a href="#本地-github-io-白嫖部署" class="headerlink" title="本地 + github.io 白嫖部署"></a>本地 + github.io 白嫖部署</h3><blockquote>
+<h2 id="Github服务器部署"><a href="#Github服务器部署" class="headerlink" title="Github服务器部署"></a>Github服务器部署</h2><hr>
+<h3 id="本地-github-io-白嫖部署"><a href="#本地-github-io-白嫖部署" class="headerlink" title="本地 + github.io 白嫖部署"></a>本地 + github.io 白嫖部署</h3><blockquote>
 <p>首先注册并登录<a href="https://github.com/new">GitHub</a>，创建新public仓库，仓库名称一定要是：<br>username.github.io（username是<a href="https://github.com/settings/admin">你的GitHub用户名</a>，大小写敏感！）</p>
 </blockquote>
 <h3 id="本地安装Hexo的git部署插件"><a href="#本地安装Hexo的git部署插件" class="headerlink" title="本地安装Hexo的git部署插件"></a>本地安装Hexo的git部署插件</h3><blockquote>
@@ -165,11 +170,13 @@
 <blockquote>
 <p>部署成功后，浏览器输入username.github.io（username是<a href="https://github.com/settings/admin">你的GitHub用户名</a>，大小写敏感！）</p>
 </blockquote>
-<h3 id="写文章-amp-发布"><a href="#写文章-amp-发布" class="headerlink" title="写文章 &amp; 发布"></a>写文章 &amp; 发布</h3><h2 id="Cloudflare部署"><a href="#Cloudflare部署" class="headerlink" title="Cloudflare部署"></a>Cloudflare部署</h2><blockquote>
+<h3 id="写文章-amp-发布"><a href="#写文章-amp-发布" class="headerlink" title="写文章 &amp; 发布"></a>写文章 &amp; 发布</h3><h2 id="Cloudflare部署"><a href="#Cloudflare部署" class="headerlink" title="Cloudflare部署"></a>Cloudflare部署</h2><hr>
+<blockquote>
 <p><a href="https://ifibe.com/posts/f86630d0/#%E4%BD%BF%E7%94%A8-Hexo-%E7%94%9F%E6%88%90%E4%B8%80%E6%AC%A1%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6">Cloudflare部署</a></p>
 <p>部署完成后，记得在<a href="https://vircloud.net/exp/cf-worker-domain.html">Cloudflare里面绑定下路由</a></p>
 </blockquote>
-<h2 id="Next主题配置"><a href="#Next主题配置" class="headerlink" title="Next主题配置"></a>Next主题配置</h2><blockquote>
+<h2 id="Next主题配置"><a href="#Next主题配置" class="headerlink" title="Next主题配置"></a>Next主题配置</h2><hr>
+<blockquote>
 <p><a href="https://theme-next.js.org/docs/theme-settings/">主题配置</a></p>
 </blockquote>
 <hr>
