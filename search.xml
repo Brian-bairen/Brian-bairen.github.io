@@ -121,7 +121,7 @@
 <p><img src="/docs/create-blog/ssh.png" alt="SSH and GPG keys" title="SSH and GPG keys"></p>
 <ul>
 <li><p>第五步：检测是否设置成功：</p>
-<p>输入命令： <font color=#0070ff> $ ssh -T <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;</a> </font>  # 注意邮箱地址不用改</p>
+<p>输入命令： <font color=#0070ff> $ ssh -T <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#109;">&#103;&#105;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#109;</a> </font>  # 注意邮箱地址不用改</p>
 </li>
 </ul>
 </blockquote>
@@ -206,9 +206,8 @@
 <p>Z-Library（简称z-lib，前身为BookFinder）是一个影子图书馆和文件分享计划，用户可在此一网站上下载期刊文章以及各种类型的书籍。</p>
 <span id="more"></span>
 
-<ul>
-<li>官网地址：<a href="https://zh.z-lib.org/">https://zh.z-lib.org/</a> <font color=Red>已经被端掉，但是服务器还在。应该还会回来。</font></li>
-</ul>
+<hr>
+<h2 id="官网地址："><a href="#官网地址：" class="headerlink" title="官网地址："></a>官网地址：</h2><p><a href="https://zh.z-lib.org/">https://zh.z-lib.org/</a> <font color=Red>已经被端掉，但是服务器还在。应该还会回来。</font></p>
 <blockquote>
 <p>目前解决方法是用 <a href="https://www.torproject.org/">Tor Browser</a> 打开 <a href="http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/">Tor 地址</a> ，然后发送至自己邮箱。<br>或者 Telegram 的 bot（1library）。</p>
 </blockquote>
