@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>HELLO WORLD</title>
+    <url>/test/hello-world/</url>
+    <content><![CDATA[<p>Hello World</p>
+<p>This is a test page</p>
+<p>你好 世界</p>
+<p>这是用于测试Blog的页面</p>
+<span id="more"></span>
+
+<hr>
+<p>Written by Brian</p>
+]]></content>
+      <tags>
+        <tag>Hello World</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>阅读WEB版</title>
     <url>/docs/READER/</url>
     <content><![CDATA[<h1 id="🌀Reader"><a href="#🌀Reader" class="headerlink" title="🌀Reader:"></a>🌀Reader:</h1><hr>
@@ -32,22 +48,6 @@
 ]]></content>
       <tags>
         <tag>reader</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HELLO WORLD</title>
-    <url>/test/hello-world/</url>
-    <content><![CDATA[<p>Hello World</p>
-<p>This is a test page</p>
-<p>你好 世界</p>
-<p>这是用于测试Blog的页面</p>
-<span id="more"></span>
-
-<hr>
-<p>Written by Brian</p>
-]]></content>
-      <tags>
-        <tag>Hello World</tag>
       </tags>
   </entry>
   <entry>
@@ -137,7 +137,7 @@
 <p><img src="/docs/create-blog/ssh.png" alt="SSH and GPG keys" title="SSH and GPG keys"></p>
 <ul>
 <li><p>第五步：检测是否设置成功：</p>
-<p>输入命令： <font color=#0070ff> $ ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#x67;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;</a> </font>  # 注意邮箱地址不用改</p>
+<p>输入命令： <font color=#0070ff> $ ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#109;">&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#109;</a> </font>  # 注意邮箱地址不用改</p>
 </li>
 </ul>
 </blockquote>
