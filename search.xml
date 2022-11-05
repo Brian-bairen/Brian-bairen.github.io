@@ -35,6 +35,22 @@
       </tags>
   </entry>
   <entry>
+    <title>HELLO WORLD</title>
+    <url>/test/hello-world/</url>
+    <content><![CDATA[<p>Hello World</p>
+<p>This is a test page</p>
+<p>你好 世界</p>
+<p>这是用于测试Blog的页面</p>
+<span id="more"></span>
+
+<hr>
+<p>Written by Brian</p>
+]]></content>
+      <tags>
+        <tag>Hello World</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>创建个人Blog</title>
     <url>/docs/create-blog/</url>
     <content><![CDATA[<h2 id="🌀静态博客-——-Hexo"><a href="#🌀静态博客-——-Hexo" class="headerlink" title="🌀静态博客 —— Hexo"></a>🌀静态博客 —— Hexo</h2><hr>
@@ -121,7 +137,7 @@
 <p><img src="/docs/create-blog/ssh.png" alt="SSH and GPG keys" title="SSH and GPG keys"></p>
 <ul>
 <li><p>第五步：检测是否设置成功：</p>
-<p>输入命令： <font color=#0070ff> $ ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;">&#x67;&#x69;&#116;&#64;&#x67;&#x69;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;</a> </font>  # 注意邮箱地址不用改</p>
+<p>输入命令： <font color=#0070ff> $ ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#x6d;">&#103;&#105;&#x74;&#64;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#x6d;</a> </font>  # 注意邮箱地址不用改</p>
 </li>
 </ul>
 </blockquote>
@@ -162,6 +178,12 @@
 <p><a href="https://ifibe.com/posts/f86630d0/#%E4%BD%BF%E7%94%A8-Hexo-%E7%94%9F%E6%88%90%E4%B8%80%E6%AC%A1%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6">Cloudflare部署</a></p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wrangler publish</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>提示以下即完成所有的运行操作。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Using namespace for Workers Site &quot;__site-workers_sites_assets&quot;</span><br><span class="line"> Uploading site files</span><br><span class="line"> Success</span><br><span class="line">⬇️ Installing wranglerjs...</span><br><span class="line">⬇️ Installing wasm-pack...</span><br><span class="line"> Built successfully, built project size is 11 KiB.</span><br><span class="line"> Successfully published your script to https://*.workers.dev    #这里就是生成的预览地址</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>部署完成后，记得在<a href="https://vircloud.net/exp/cf-worker-domain.html">Cloudflare里面绑定下路由</a></p>
 </blockquote>
@@ -171,7 +193,7 @@
 <p><a href="https://theme-next.js.org/docs/theme-settings/">主题配置</a></p>
 </blockquote>
 <hr>
-<p>所有资源来自网络<br>感谢 <a href="https://dragonbaby308.github.io/hexo/">DragonBaby308</a> &amp; <a href="https://www.bilibili.com/read/cv12633102">码游菌</a><br>Collected by Brian</p>
+<p>所有资源来自网络<br>感谢 <a href="https://dragonbaby308.github.io/hexo/">DragonBaby308</a> , <a href="https://www.bilibili.com/read/cv12633102">码游菌</a> &amp; <a href="https://ifibe.com/posts/f86630d0/">Karan</a><br>Collected by Brian</p>
 ]]></content>
       <tags>
         <tag>Blog</tag>
@@ -181,35 +203,20 @@
     <title>Z-Library 世界上最大的数字图书馆</title>
     <url>/docs/zlibrary/</url>
     <content><![CDATA[<h1 id="🌀Z-Library-世界上最大的数字图书馆"><a href="#🌀Z-Library-世界上最大的数字图书馆" class="headerlink" title="🌀Z-Library 世界上最大的数字图书馆"></a>🌀Z-Library 世界上最大的数字图书馆</h1><hr>
+<p>Z-Library（简称z-lib，前身为BookFinder）是一个影子图书馆和文件分享计划，用户可在此一网站上下载期刊文章以及各种类型的书籍。</p>
 <span id="more"></span>
 
 <ul>
-<li>官网地址：<a href="https://zh.z-lib.org/">https://zh.z-lib.org/</a> <font color=Red>已经被端掉</font></li>
+<li>官网地址：<a href="https://zh.z-lib.org/">https://zh.z-lib.org/</a> <font color=Red>已经被端掉，但是服务器还在。应该还会回来。</font></li>
 </ul>
 <blockquote>
-<p>目前解决方法是用Tor Browser打开 <a href="http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/">Tor 地址</a>，然后发送至自己邮箱<br>或者 Telegram 的 bot 1library.</p>
+<p>目前解决方法是用 <a href="https://www.torproject.org/">Tor Browser</a> 打开 <a href="http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/">Tor 地址</a> ，然后发送至自己邮箱。<br>或者 Telegram 的 bot（1library）。</p>
 </blockquote>
 <hr>
 <p>所有资源来自网络<br>Collected by Brian</p>
 ]]></content>
       <tags>
         <tag>zlibrary</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HELLO WORLD</title>
-    <url>/test/hello-world/</url>
-    <content><![CDATA[<p>Hello World</p>
-<p>This is a test page</p>
-<p>你好 世界</p>
-<p>这是用于测试Blog的页面</p>
-<span id="more"></span>
-
-<hr>
-<p>Written by Brian</p>
-]]></content>
-      <tags>
-        <tag>Hello World</tag>
       </tags>
   </entry>
 </search>
